@@ -1,0 +1,64 @@
+<div class="book-container">
+<h2>{{title}}</h2>
+<div class="table-responsive">
+<form method="POST" action="/bookUsers/add">
+<table class="table">
+  <thead>
+    <tr>
+    
+      <th scope="col">Full Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">ID Type</th>
+      <th scope="col">Books Borrowed</th>
+      <th scope="col">Issued Date</th>
+      <th scope="col">Expected Return Date</th>
+      <th scope="col">Actual Return Date</th>
+      <th scope="col">Have to pay Fine?</th> 
+      <th scope="col">Fine Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+     
+      <td><input type="text" name="fname" required 
+              placeholder="Enter Full Name"></td>
+      <td><input type="email" name="femail" required 
+              placeholder="Enter Email"></td>
+      <td><input type="text" name="fid" required 
+              placeholder="Enter ID Type"></td>
+      <td><select name="fbooks">
+        <option></option>
+        {{#each dropdown}}
+        <option>{{this.title}}</option>
+        {{/each}}
+      </select></td>
+      <td><input type="date" name="fIssuedDate"  
+              placeholder="Enter Issued Date"></td>
+      <td><input type="date" name="fExpectedReturnDate"  
+              placeholder="Enter Expected Return Date"></td>
+        <td><input type="date" name="fActualReturnDate"  
+              placeholder="Enter Actual Return Date"></td>
+        <td><select name="fisFined">
+          <option>NO</option>
+          <option>YES</option>
+        </select></td>
+      <td><input type="text" name="ffineAmount"  
+              placeholder="Enter Fine Amount"></td>
+    </tr>
+  </tbody>
+  <tfooter>
+    <tr>
+        <td></td>
+        <td>
+            <input type="submit" value="Save" 
+              class="btn btn-success">
+           <a href="/bookUsers"><input type="button" value="Cancel" 
+              class="btn btn-danger"></a>
+        </td>
+    </tr>
+  </tfooter>
+</table>
+</form>
+</div>
+</div>

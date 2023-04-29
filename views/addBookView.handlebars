@@ -1,0 +1,38 @@
+<div class="book-container">
+<h2>{{title}}</h2>
+<div class="table-responsive">
+<form method="POST" action="/books/add">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Author</th>
+      <th scope="col">Language</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td><input type="text" name="ftitle" required 
+              placeholder="Enter Title"></td>
+      <td><input type="text" name="fauthor" required 
+              placeholder="Enter Author name"></td>
+      <td><input type="text" name="flanguage" required 
+              placeholder="Enter Language"></td>
+    </tr>
+  </tbody>
+  <tfooter>
+    <tr>
+        <td></td>
+        <td>
+            <input type="submit" value="Save" 
+              class="btn btn-success">
+           <a href="/books"><input type="button" value="Cancel" 
+              class="btn btn-danger"></a>
+        </td>
+    </tr>
+  </tfooter>
+</table>
+</form>
+</div>
+</div>

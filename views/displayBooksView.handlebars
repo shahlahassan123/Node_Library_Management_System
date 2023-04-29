@@ -1,0 +1,43 @@
+<div class="book-container">
+<h2>{{title}}</h2>
+<div class="table-responsive">
+<table class="table">
+ {{#if data}}
+  <thead>
+    <tr>
+      
+      <th scope="col">Title</th>
+      <th scope="col">Author</th>
+      <th scope="col">Language</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  {{else}}
+  <tr><td colspan="3"> No Books available!</td></tr>
+  {{/if}}
+  <tbody>
+    {{#each data}}
+    <tr>
+     
+      <td>{{this.title}}</td>
+      <td>{{this.author}}</td>
+      <td>{{this.language}}</td>
+      <td>
+        <a href="/books/edit/:{{this.id}}">Edit</a> |
+        <a href="/books/delete/:{{this.id}}">Delete</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+  <tfooter>
+    <tr>
+        <td>
+            <button class="btn btn-primary"> 
+                <a class="addLink"href="/books/add">Add Book</a>
+            </button>
+        </td>
+    </tr>
+  </tfooter>
+</table>
+</div>
+</div>

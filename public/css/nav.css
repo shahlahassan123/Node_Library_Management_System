@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+.main-container{
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* SIDE NAVIGATION MENU */
+.sideNav{
+    padding-top: 10rem;
+    margin-right: 0;
+    border-right: 3px solid black;
+    width: 12rem;
+    height: 100vh;
+    background-color: #296d98;
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+.sideNav-item{
+    padding: 2rem;
+    font-size: 1.3rem;
+    color: #fff;
+    border-top: 1px solid #000;
+    text-align: center;
+    
+}
+
+.error-message{
+    padding: 2rem;
+    color: #FF0000
+
+}
+
+/* DISPLAY BOOK VIEW */
+.book-container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+h2{
+    padding: 2rem;
+   text-align: center;
+}
+
+.addLink,.sideNav-links, .sideNav-links:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.addLink:hover{
+    color: white;
+    text-decoration: none;
+}
+
+input{
+    padding: 0.5rem;
+}
+
+select{
+    padding: 0.65rem;
+}
+
+.book-container{
+    overflow: scroll;
+    height: 100vh;
+}
+

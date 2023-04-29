@@ -1,0 +1,54 @@
+<div class="book-container">
+<h2>{{title}}</h2>
+<div class="table-responsive">
+<form method="post" action="/newOrders/delete">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Author</th>
+      <th scope="col">Language</th>
+      <th scope="col">Expected Delivery Date</th>
+      <th scope="col">Payment Type</th>
+      <th scope="col">Amount Paid</th>
+      <th scope="col">Delivery Complete</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      
+      <td><input type="text" name="ftitle" required 
+              value="{{data.title}}"></td>
+      <td><input type="text" name="fauthor" required 
+             value="{{data.author}}"></td>
+      <td><input type="text" name="flanguage" required 
+              value="{{data.language}}"></td>
+      <td><input type="date" name="fexpectedDeliveryDate"  
+              value="{{data.expectedDeliveryDate}}"></td>
+      <td><input type="text" name="fpaymentType"  
+             value="{{data.paymentType}}"></td>
+      <td><input type="text" name="famountPaid"  
+             value="{{data.amountPaid}}"></td>
+      <td><select name="fisdeliveryComplete">
+        <option>NO</option>
+        <option>YES</option>
+      </select></td>
+    </tr>
+    <input type="hidden" name="id" value="{{data.id}}">
+  </tbody>
+  <tfooter>
+    <tr>
+        <td></td>
+        <td>
+            <input type="submit" value="Delete" 
+              class="btn btn-success">
+           <a href="/newOrders"><input type="button" value="Cancel" 
+              class="btn btn-danger"></a>
+        </td>
+    </tr>
+  </tfooter>
+</table>
+</form>
+</div>
+</div>

@@ -1,0 +1,50 @@
+<div class="book-container">
+<h2>{{title}}</h2>
+<div class="table-responsive">
+<table class="table">
+ {{#if data}}
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Author</th>
+      <th scope="col">Language</th>
+      <th scope="col">Expected Delivery Date</th>
+      <th scope="col">Payment Type</th>
+      <th scope="col">Amount Paid</th>
+      <th scope="col">Delivery Complete</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  {{else}}
+  <tr><td colspan="3"> No Orders placed!</td></tr>
+  {{/if}}
+  <tbody>
+    {{#each data}}
+    <tr>
+      <td>{{this.title}}</td>
+      <td>{{this.author}}</td>
+      <td>{{this.language}}</td>
+      <td>{{this.expectedDeliveryDate}}</td>
+      <td>{{this.paymentType}}</td>
+      <td>{{this.amountPaid}}</td>
+      <td>{{this.isdeliveryComplete}}</td>
+
+      <td>
+        <a href="/newOrders/edit/:{{this.id}}">Edit</a> |
+        <a href="/newOrders/delete/:{{this.id}}">Delete</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+  <tfooter>
+    <tr>
+        <td>
+            <button class="btn btn-primary"> 
+                <a class="addLink"href="/newOrders/add">Add Order Details</a>
+            </button>
+        </td>
+    </tr>
+  </tfooter>
+</table>
+</div>
+</div>

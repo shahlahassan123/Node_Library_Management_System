@@ -1,0 +1,53 @@
+<div class="book-container">
+<h2>{{title}}</h2>
+<div class="table-responsive">
+<table class="table">
+ {{#if data}}
+  <thead>
+    <tr>
+      <th scope="col">Full Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">ID Type</th>
+      <th scope="col">Books Borrowed</th>
+      <th scope="col">Issued Date</th>
+      <th scope="col">Expected Return Date</th>
+      <th scope="col">Actual Return Date</th>
+      <th scope="col">Have to pay Fine?</th> 
+      <th scope="col">Fine Amount</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  {{else}}
+  <tr><td colspan="3"> No books borrowed by the users!</td></tr>
+  {{/if}}
+  <tbody>
+    {{#each data}}
+    <tr>
+      <td>{{this.fullName}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.idType}}</td>
+      <td>{{this.booksBorrowed}}</td>
+      <td>{{this.issuedDate}}</td>
+      <td>{{this.expectedReturnDate}}</td>
+      <td>{{this.actualReturnDate}}</td>
+      <td>{{this.isFined}}</td>
+      <td>{{this.fineAmount}}</td>
+      <td>
+        <a href="/bookUsers/edit/:{{this.id}}">Edit</a> |
+        <a href="/bookUsers/delete/:{{this.id}}">Delete</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+  <tfooter>
+    <tr>
+        <td>
+            <button class="btn btn-primary"> 
+                <a class="addLink"href="/bookUsers/add">Add User</a>
+            </button>
+        </td>
+    </tr>
+  </tfooter>
+</table>
+</div>
+</div>
